@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/allStudentsFragment">
+
+    <fragment
+        android:id="@+id/allStudentsFragment"
+        android:name="ca.qc.castroguilherme.roomstudentfragment.AllStudentsFragment"
+        android:label="Students"
+        tools:layout="@layout/fragment_all_students" >
+
+        <action
+            android:id="@+id/action_allStudentsFragment_to_editStudentFragment"
+            app:destination="@id/editStudentFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addStudentFragment"
+        android:name="ca.qc.castroguilherme.roomstudentfragment.AddStudentFragment"
+        android:label="Students"
+        tools:layout="@layout/fragment_add_student" />
+    <fragment
+        android:id="@+id/editStudentFragment"
+        android:name="ca.qc.castroguilherme.roomstudentfragment.EditStudentFragment"
+        android:label="Students"
+        tools:layout="@layout/fragment_edit_student" >
+
+        <argument
+            android:name="student"
+            app:argType="ca.qc.castroguilherme.roomstudentfragment.Student" />
+    </fragment>
+</navigation>
